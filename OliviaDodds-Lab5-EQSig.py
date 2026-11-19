@@ -1,7 +1,7 @@
 #Olivia Dodds
 #Python FA2026
 #Due: November 19
-#Lab 4: EQSig
+#Lab 5: EQSig
 #Program retrieves earthquake data from the USGS website and calculates statistics on the significance values 
 #of earthquakes in the past month.
 
@@ -20,6 +20,7 @@ eData = json.loads(data)
 #Extracting the list of earthquakes from the JSON object
 earthquakeList = eData["features"]
 
+#Creating a list to store the significance values
 sigList = []
 
 #Calculating statistics on the significance values of earthquakes
@@ -36,7 +37,7 @@ mean = statistics.mean(sigList)
 median = statistics.median(sigList)
 stdev = statistics.stdev(sigList)
 modes = statistics.mode(sigList)
-
+    
 #Printing the calculated statistics
 print("The minimum sig is", format(minimum, ".3f"))
 print("The maximum sig is", format(maximum, ".3f"))
