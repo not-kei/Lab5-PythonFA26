@@ -1,11 +1,13 @@
 #Olivia Dodds
 #Python FA2026
 #Due: November 19
-#Lab 4: Uppercase
+#Lab 5: Uppercase
+#Program reads a text file and converts all characters to uppercase, then writes the result to a new file.
 
 def convertToUppercase():
     #open file to read
     with open("regular.txt", "r") as infile:
+        #creates a string variable with the contents of the file
         contents = infile.read()
 
     #convert all characters to uppercase
